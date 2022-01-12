@@ -23,10 +23,21 @@ button {
 
 body {
   font-family: $primary-ff;
+  color: white;
 }
 
 .container {
   margin: 0 auto;
 }
 
-@import './components/Header/Header.scss';
+.btn--primary {
+  color: #fff;
+  background-color: #d41443;
+}
+
+.btn--secondary {
+  color: $primary-textColor;
+  background-color: #fff;
+}
+
+@import './components/Header/_Header.scss';
