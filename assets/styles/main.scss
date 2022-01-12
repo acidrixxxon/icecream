@@ -1,0 +1,32 @@
+@import '../styles/variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+body {
+  font-family: $primary-ff;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+@import './components/Header/Header.scss';

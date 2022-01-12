@@ -1,0 +1,102 @@
+@import './../../variables.scss';
+@import './media.scss';
+
+header#header {
+  height: 100vh;
+  width: 100%;
+  padding: 38px 35px;
+  position: relative;
+  overflow: hidden;
+
+  background-color: $header-bgc;
+
+  .header__container {
+    max-width: 1120px;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header__logo {
+      .header__logo--link {
+      }
+
+      .header__logo--image {
+      }
+    }
+
+    .header__nav {
+      width: 541px;
+      z-index: 2;
+
+      .header__nav__list {
+        display: flex;
+        justify-content: space-between;
+
+        .header__nav__list--item {
+          .header__nav__list--link {
+            color: #fff;
+            font-family: $secondary-ff;
+            transition: all 0.5s ease-in-out;
+
+            &.active {
+              color: $primary-textColor;
+            }
+
+            &:hover {
+              color: $primary-textColor;
+            }
+          }
+        }
+
+        @media screen and (max-width: $mediumScreen) {
+          display: none;
+        }
+      }
+    }
+
+    .header__btn {
+      background-color: #fff;
+      border-radius: 22px;
+      width: 159px;
+      height: 45px;
+
+      font-weight: 700;
+      font-size: 16px;
+      text-align: center;
+      color: $primary-textColor;
+
+      transition: all 0.5s ease-in-out;
+      z-index: 2;
+
+      svg {
+        margin-left: 10px;
+      }
+
+      &:hover {
+        background-color: #ecebeb;
+
+        svg {
+        }
+      }
+    }
+  }
+
+  .header__icecream {
+    width: 538px;
+    height: 538px;
+    border-radius: 50%;
+    position: absolute;
+    left: 475px;
+    top: 52px;
+    background-color: #ffa5ba;
+    z-index: 1;
+
+    img {
+      position: relative;
+      top: 15%;
+      left: 13%;
+    }
+  }
+}
