@@ -40,6 +40,9 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  header#header {
+    height: 400px;
+  }
   .header__nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -61,6 +64,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-right: 30px;
   }
   .header__nav .header__nav__hamburger .line {
     width: 100%;
@@ -77,6 +81,12 @@ header#header {
   position: relative;
   overflow: hidden;
   background-color: #ffb8ca;
+}
+
+@media screen and (max-width: 768px) {
+  header#header {
+    height: 400px;
+  }
 }
 
 header#header .header__container {
@@ -110,6 +120,8 @@ header#header .header__container .header__toprow .header__nav .header__nav__list
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 header#header .header__container .header__toprow .header__nav .header__nav__list .header__nav__list--item .header__nav__list--link {
@@ -165,10 +177,23 @@ header#header .header__container .header__main {
           justify-content: space-between;
 }
 
+@media screen and (max-width: 768px) {
+  header#header .header__container .header__main {
+    margin: 15px 0 19px;
+  }
+}
+
 header#header .header__container .header__main .header__main__left {
   max-width: 277px;
   margin-left: 65px;
   z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  header#header .header__container .header__main .header__main__left {
+    margin-left: 0;
+    max-width: 165px;
+  }
 }
 
 header#header .header__container .header__main .header__main__left .header__main__left--title {
@@ -178,10 +203,25 @@ header#header .header__container .header__main .header__main__left .header__main
   margin-bottom: 25px;
 }
 
+@media screen and (max-width: 768px) {
+  header#header .header__container .header__main .header__main__left .header__main__left--title {
+    font-size: 22px;
+    line-height: 25px;
+    margin-bottom: 20px;
+  }
+}
+
 header#header .header__container .header__main .header__main__left .header__main__left--title span {
   color: #d41443;
   font-size: 58px;
   line-height: 52px;
+}
+
+@media screen and (max-width: 768px) {
+  header#header .header__container .header__main .header__main__left .header__main__left--title span {
+    font-size: 34px;
+    line-height: 30px;
+  }
 }
 
 header#header .header__container .header__main .header__main__left .header__main__left__buttons .header__main__left__buttons--btn {
@@ -189,6 +229,14 @@ header#header .header__container .header__main .header__main__left .header__main
   border-radius: 20px;
   -webkit-transition: all 0.35s ease-in;
   transition: all 0.35s ease-in;
+}
+
+@media screen and (max-width: 768px) {
+  header#header .header__container .header__main .header__main__left .header__main__left__buttons .header__main__left__buttons--btn {
+    font-size: 8px;
+    line-height: 10px;
+    padding: 7px 15px;
+  }
 }
 
 header#header .header__container .header__main .header__main__left .header__main__left__buttons .header__main__left__buttons--btn:first-child {
@@ -217,10 +265,24 @@ header#header .header__container .header__main .header__main__right .header__mai
   letter-spacing: 0.04em;
 }
 
+@media screen and (max-width: 768px) {
+  header#header .header__container .header__main .header__main__right .header__main__right__numbers--number {
+    font-size: 28px;
+    line-height: 15px;
+  }
+}
+
 header#header .header__container .header__main .header__main__right .header__main__right__numbers--text {
   color: #fff;
   font-size: 14px;
   font-family: "DM Sans";
+}
+
+@media screen and (max-width: 768px) {
+  header#header .header__container .header__main .header__main__right .header__main__right__numbers--text {
+    font-size: 8px;
+    line-height: 10px;
+  }
 }
 
 header#header .header__container .header__main .header__main__right .header__main__right__numbers:first-child {
@@ -237,6 +299,15 @@ header#header .header__container .header__main .header__main__right .header__mai
   right: -15px;
   top: -5px;
   z-index: -1;
+}
+
+@media screen and (max-width: 768px) {
+  header#header .header__container .header__main .header__main__right .header__main__right__numbers::before {
+    height: 16px;
+    width: 16px;
+    right: -9px;
+    top: -11px;
+  }
 }
 
 header#header .header__container .header__bottomrow {
@@ -261,8 +332,21 @@ header#header .header__container .header__bottomrow .header__bottomrow__left {
   z-index: 2;
 }
 
+@media screen and (max-width: 768px) {
+  header#header .header__container .header__bottomrow .header__bottomrow__left .header__bottomrow__left__image--img {
+    width: 124px;
+    height: 126px;
+  }
+}
+
 header#header .header__container .header__bottomrow .header__bottomrow__left .header__bottomrow__left__text {
   max-width: 200px;
+}
+
+@media screen and (max-width: 768px) {
+  header#header .header__container .header__bottomrow .header__bottomrow__left .header__bottomrow__left__text {
+    max-width: 114px;
+  }
 }
 
 header#header .header__container .header__bottomrow .header__bottomrow__left .header__bottomrow__left__text--para {
@@ -272,6 +356,13 @@ header#header .header__container .header__bottomrow .header__bottomrow__left .he
   margin-bottom: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  header#header .header__container .header__bottomrow .header__bottomrow__left .header__bottomrow__left__text--para {
+    font-size: 8px;
+    line-height: 12px;
+  }
+}
+
 header#header .header__container .header__bottomrow .header__bottomrow__left .header__bottomrow__left__text--arrow {
   width: 26px;
   height: 26px;
@@ -279,14 +370,29 @@ header#header .header__container .header__bottomrow .header__bottomrow__left .he
   background: url("http://127.0.0.1:5500/assets/img/arrow-right.png") center center no-repeat;
 }
 
+@media screen and (max-width: 768px) {
+  header#header .header__container .header__bottomrow .header__bottomrow__left .header__bottomrow__left__text--arrow {
+    width: 18px;
+    height: 18px;
+  }
+}
+
 header#header .header__container .header__bottomrow .header__bottomrow__right {
   z-index: 2;
   position: absolute;
   bottom: -3px;
   right: 3%;
-  width: 250px;
+  width: 293px;
+  height: 232px;
   -webkit-animation: header-anim 2s;
           animation: header-anim 2s;
+}
+
+@media screen and (max-width: 768px) {
+  header#header .header__container .header__bottomrow .header__bottomrow__right {
+    width: 168px;
+    height: 133px;
+  }
 }
 
 header#header .header__container .header__bottomrow .header__bottomrow__right--img {
@@ -301,16 +407,88 @@ header#header .header__icecream {
   height: 538px;
   border-radius: 50%;
   position: absolute;
-  left: 40%;
-  top: 52px;
+  left: 38%;
+  top: 108px;
   background-color: #ffa5ba;
   z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  header#header .header__icecream {
+    height: 324px;
+    width: 322px;
+    left: 37%;
+    top: 31px;
+  }
 }
 
 header#header .header__icecream img {
   position: relative;
   top: 15%;
   left: 13%;
+}
+
+@media screen and (max-width: 768px) {
+  header#header .header__icecream img {
+    height: 336px;
+    width: 144px;
+    left: 20%;
+    bottom: 0;
+  }
+}
+
+header#header .header__navbar {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  header#header .header__navbar.show {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header#header .header__navbar .header__navbar__buttons .header__navbar__buttons--closeBtn {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header#header .header__navbar .header__navbar__buttons .header__navbar__buttons--btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header#header .header__navbar .header__navbar__buttons {
+    padding: 23px 34px 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header#header .header__navbar {
+    width: 254px;
+    height: 1020px;
+    background-color: #e17992;
+    position: absolute;
+    right: -254px;
+    opacity: 0;
+    top: 0;
+    z-index: 4;
+  }
 }
 
 @-webkit-keyframes header-anim {

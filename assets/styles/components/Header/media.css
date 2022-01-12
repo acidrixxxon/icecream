@@ -1,4 +1,7 @@
 @media screen and (max-width: 768px) {
+  header#header {
+    height: 400px;
+  }
   .header__nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -20,6 +23,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-right: 30px;
   }
   .header__nav .header__nav__hamburger .line {
     width: 100%;

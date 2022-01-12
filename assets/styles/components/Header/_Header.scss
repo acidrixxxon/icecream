@@ -10,6 +10,10 @@ header#header {
 
   background-color: $header-bgc;
 
+  @media screen and (max-width: $TabletScreen) {
+    height: 400px;
+  }
+
   .header__container {
     max-width: 1120px;
     width: 100%;
@@ -36,6 +40,7 @@ header#header {
         .header__nav__list {
           display: flex;
           justify-content: space-between;
+          flex-wrap: wrap;
 
           .header__nav__list--item {
             .header__nav__list--link {
@@ -53,7 +58,7 @@ header#header {
             }
           }
 
-          @media screen and (max-width: $mediumScreen) {
+          @media screen and (max-width: $TabletScreen) {
             display: none;
           }
         }
@@ -91,10 +96,19 @@ header#header {
       display: flex;
       justify-content: space-between;
 
+      @media screen and (max-width: $TabletScreen) {
+        margin: 15px 0 19px;
+      }
+
       .header__main__left {
         max-width: 277px;
         margin-left: 65px;
         z-index: 2;
+
+        @media screen and (max-width: $TabletScreen) {
+          margin-left: 0;
+          max-width: 165px;
+        }
 
         .header__main__left--title {
           font-size: 38px;
@@ -102,10 +116,20 @@ header#header {
           line-height: 43px;
           margin-bottom: 25px;
 
+          @media screen and (max-width: $TabletScreen) {
+            font-size: 22px;
+            line-height: 25px;
+            margin-bottom: 20px;
+          }
           span {
             color: $primary-textColor;
             font-size: 58px;
             line-height: 52px;
+
+            @media screen and (max-width: $TabletScreen) {
+              font-size: 34px;
+              line-height: 30px;
+            }
           }
         }
 
@@ -114,6 +138,12 @@ header#header {
             padding: 10px 20px;
             border-radius: 20px;
             transition: all 0.35s ease-in;
+
+            @media screen and (max-width: $TabletScreen) {
+              font-size: 8px;
+              line-height: 10px;
+              padding: 7px 15px;
+            }
 
             &:first-child {
               margin-right: 15px;
@@ -146,12 +176,22 @@ header#header {
             font-size: 46px;
             line-height: 52px;
             letter-spacing: 0.04em;
+
+            @media screen and (max-width: $TabletScreen) {
+              font-size: 28px;
+              line-height: 15px;
+            }
           }
 
           &--text {
             color: #fff;
             font-size: 14px;
             font-family: $secondary-ff;
+
+            @media screen and (max-width: $TabletScreen) {
+              font-size: 8px;
+              line-height: 10px;
+            }
           }
 
           &:first-child {
@@ -168,6 +208,13 @@ header#header {
             right: -15px;
             top: -5px;
             z-index: -1;
+
+            @media screen and (max-width: $TabletScreen) {
+              height: 16px;
+              width: 16px;
+              right: -9px;
+              top: -11px;
+            }
           }
         }
       }
@@ -184,18 +231,31 @@ header#header {
         z-index: 2;
 
         .header__bottomrow__left__image {
-          &--image {
+          &--img {
+            @media screen and (max-width: $TabletScreen) {
+              width: 124px;
+              height: 126px;
+            }
           }
         }
 
         .header__bottomrow__left__text {
           max-width: 200px;
 
+          @media screen and (max-width: $TabletScreen) {
+            max-width: 114px;
+          }
+
           &--para {
             font-family: $secondary-ff;
             line-height: 19px;
             font-size: 14px;
             margin-bottom: 20px;
+
+            @media screen and (max-width: $TabletScreen) {
+              font-size: 8px;
+              line-height: 12px;
+            }
           }
 
           &--arrow {
@@ -204,6 +264,11 @@ header#header {
             border-radius: 50%;
             background: url('http://127.0.0.1:5500/assets/img/arrow-right.png') center center
               no-repeat;
+
+            @media screen and (max-width: $TabletScreen) {
+              width: 18px;
+              height: 18px;
+            }
           }
         }
       }
@@ -213,8 +278,14 @@ header#header {
         position: absolute;
         bottom: -3px;
         right: 3%;
-        width: 250px;
+        width: 293px;
+        height: 232px;
         animation: header-anim 2s;
+
+        @media screen and (max-width: $TabletScreen) {
+          width: 168px;
+          height: 133px;
+        }
 
         &--img {
           width: 100%;
@@ -230,15 +301,69 @@ header#header {
     height: 538px;
     border-radius: 50%;
     position: absolute;
-    left: 40%;
-    top: 52px;
+    left: 38%;
+    top: 108px;
     background-color: #ffa5ba;
     z-index: 1;
+
+    @media screen and (max-width: $TabletScreen) {
+      height: 324px;
+      width: 322px;
+      left: 37%;
+      top: 31px;
+    }
 
     img {
       position: relative;
       top: 15%;
       left: 13%;
+
+      @media screen and (max-width: $TabletScreen) {
+        height: 336px;
+        width: 144px;
+        left: 20%;
+        bottom: 0;
+      }
+    }
+  }
+
+  .header__navbar {
+    transition: all 0.5s ease-in-out;
+    &.show {
+      @media screen and (max-width: $TabletScreen) {
+        right: 0;
+        opacity: 1;
+      }
+    }
+    .header__navbar__buttons {
+      .header__navbar__buttons--closeBtn {
+        @media screen and (max-width: $TabletScreen) {
+          cursor: pointer;
+        }
+      }
+
+      .header__navbar__buttons--btn {
+        @media screen and (max-width: $TabletScreen) {
+          width: 100%;
+          text-align: center;
+        }
+      }
+      @media screen and (max-width: $TabletScreen) {
+        padding: 23px 34px 25px;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+      }
+    }
+    @media screen and (max-width: $TabletScreen) {
+      width: 254px;
+      height: 1020px;
+      background-color: $NavbarColor;
+      position: absolute;
+      right: -254px;
+      opacity: 0;
+      top: 0;
+      z-index: 4;
     }
   }
 }
