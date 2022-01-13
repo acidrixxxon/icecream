@@ -21,11 +21,13 @@ li {
 body {
   font-family: $primary-ff;
   color: white;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .container {
   margin: 0 auto;
+  max-width: 1120px;
+  width: 100%;
 }
 
 button {
@@ -59,5 +61,24 @@ button {
   background-color: #fff;
 }
 
+span.label {
+  display: block;
+  color: $LabelPrimaryColor;
+  font-size: 30px;
+  line-height: 34px;
+  letter-spacing: 0.04em;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+h1.title {
+  font-size: 58px;
+  line-height: 66px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $primary-textColor;
+}
+
 @import './components/Header/_Header.scss';
+@import './components/Products/_Products.scss';
 @import './components/Navbar/_Navbar.scss';

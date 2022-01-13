@@ -1,0 +1,96 @@
+@import './../../_Variables.scss';
+@import './../../_mixins.scss';
+
+#products {
+  color: #333;
+  padding: 122px 35px;
+
+  .products__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .products__heading {
+      text-align: center;
+
+      &--label {
+      }
+
+      &--title {
+        margin-bottom: 175px;
+      }
+    }
+
+    .products__catalog {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+
+      &__item {
+        width: 329px;
+        height: 525px;
+        border-radius: 24px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+
+        &.item-1 {
+          background-color: #ffb8ca;
+        }
+
+        &.item-2 {
+          background-color: #f0d1a5;
+          margin: 0 30px;
+        }
+
+        &.item-3 {
+          background-color: #c2e297;
+        }
+
+        .products__catalog__item--image {
+          width: 225px;
+          height: 225px;
+          border-radius: 50%;
+          background-color: #ffa5ba;
+          margin-top: -122px;
+          margin-bottom: 40px;
+        }
+
+        .product__catalog__item--title {
+          font-size: 30px;
+          color: #fff;
+          line-height: 34px;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          margin-bottom: 70px;
+        }
+
+        .product__catalog__item--para {
+          text-align: center;
+          margin-bottom: 60px;
+          font-size: 16px;
+          color: #ffffff;
+          letter-spacing: 0.04em;
+          font-family: $secondary-ff;
+          font-weight: bold;
+        }
+
+        &--arrow {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background: url('http://127.0.0.1:5500/assets/img/arrow-right.png') center center
+            no-repeat;
+          background-size: cover;
+
+          @media screen and (max-width: $TabletScreen) {
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+    }
+  }
+}

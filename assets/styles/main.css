@@ -19,11 +19,13 @@ li {
 body {
   font-family: "Titan One";
   color: white;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .container {
   margin: 0 auto;
+  max-width: 1120px;
+  width: 100%;
 }
 
 button {
@@ -56,6 +58,24 @@ button {
 .btn--secondary {
   color: #d41443;
   background-color: #fff;
+}
+
+span.label {
+  display: block;
+  color: #ffa5ba;
+  font-size: 30px;
+  line-height: 34px;
+  letter-spacing: 0.04em;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+h1.title {
+  font-size: 58px;
+  line-height: 66px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #d41443;
 }
 
 @media screen and (max-width: 768px) {
@@ -95,11 +115,6 @@ button {
   position: relative;
   overflow: hidden;
   background-color: #ffb8ca;
-}
-
-#header .header__container {
-  max-width: 1120px;
-  width: 100%;
 }
 
 #header .header__container .header__toprow {
@@ -291,7 +306,7 @@ button {
   margin-right: 15px;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 768px) {
   #header .header__container .header__main .header__main__left .header__main__left__buttons .header__main__left__buttons--btn:first-child {
     margin-right: 8px;
   }
@@ -380,6 +395,7 @@ button {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  position: relative;
 }
 
 @media screen and (max-width: 320px) {
@@ -446,7 +462,7 @@ button {
 #header .header__container .header__bottomrow .header__bottomrow__right {
   z-index: 2;
   position: absolute;
-  bottom: -3px;
+  bottom: -15%;
   right: 3%;
   width: 293px;
   height: 232px;
@@ -569,6 +585,116 @@ button {
     -webkit-transform: translateX(0);
             transform: translateX(0);
     opacity: 1;
+  }
+}
+
+#products {
+  color: #333;
+  padding: 122px 35px;
+}
+
+#products .products__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#products .products__container .products__heading {
+  text-align: center;
+}
+
+#products .products__container .products__heading--title {
+  margin-bottom: 175px;
+}
+
+#products .products__container .products__catalog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#products .products__container .products__catalog__item {
+  width: 329px;
+  height: 525px;
+  border-radius: 24px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+}
+
+#products .products__container .products__catalog__item.item-1 {
+  background-color: #ffb8ca;
+}
+
+#products .products__container .products__catalog__item.item-2 {
+  background-color: #f0d1a5;
+  margin: 0 30px;
+}
+
+#products .products__container .products__catalog__item.item-3 {
+  background-color: #c2e297;
+}
+
+#products .products__container .products__catalog__item .products__catalog__item--image {
+  width: 225px;
+  height: 225px;
+  border-radius: 50%;
+  background-color: #ffa5ba;
+  margin-top: -122px;
+  margin-bottom: 40px;
+}
+
+#products .products__container .products__catalog__item .product__catalog__item--title {
+  font-size: 30px;
+  color: #fff;
+  line-height: 34px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+}
+
+#products .products__container .products__catalog__item .product__catalog__item--para {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 16px;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  font-family: "DM Sans";
+  font-weight: bold;
+}
+
+#products .products__container .products__catalog__item--arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: url("http://127.0.0.1:5500/assets/img/arrow-right.png") center center no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+  #products .products__container .products__catalog__item--arrow {
+    width: 18px;
+    height: 18px;
   }
 }
 
