@@ -5,13 +5,25 @@
           box-sizing: border-box;
 }
 
+a,
 a:link,
 a:visited {
+  color: #fff;
   text-decoration: none;
 }
 
 li {
   list-style: none;
+}
+
+body {
+  font-family: "Titan One";
+  color: white;
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
 }
 
 button {
@@ -20,13 +32,20 @@ button {
   cursor: pointer;
 }
 
-body {
-  font-family: "Titan One";
-  color: white;
+.btn {
+  border-radius: 22px;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 22px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  padding: 12px 10px;
+  line-height: 20px;
 }
 
-.container {
-  margin: 0 auto;
+.btn svg {
+  margin-left: 10px;
 }
 
 .btn--primary {
@@ -40,17 +59,6 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  header#header {
-    height: 400px;
-  }
-  .header__nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
-  }
   .header__nav .header__nav__hamburger {
     width: 20px;
     height: 15px;
@@ -74,7 +82,13 @@ body {
   }
 }
 
-header#header {
+@media screen and (max-width: 600px) {
+  .header__nav__hamburger {
+    margin-right: 0 !important;
+  }
+}
+
+#header {
   height: 100vh;
   width: 100%;
   padding: 38px 35px;
@@ -83,18 +97,12 @@ header#header {
   background-color: #ffb8ca;
 }
 
-@media screen and (max-width: 768px) {
-  header#header {
-    height: 400px;
-  }
-}
-
-header#header .header__container {
+#header .header__container {
   max-width: 1120px;
   width: 100%;
 }
 
-header#header .header__container .header__toprow {
+#header .header__container .header__toprow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -107,13 +115,28 @@ header#header .header__container .header__toprow {
   width: 100%;
 }
 
-header#header .header__container .header__toprow .header__nav {
+#header .header__container .header__toprow .header__logo {
+  z-index: 2;
+}
+
+#header .header__container .header__toprow .header__nav {
   width: 541px;
   z-index: 2;
   margin: 0 10px;
 }
 
-header#header .header__container .header__toprow .header__nav .header__nav__list {
+@media screen and (max-width: 768px) {
+  #header .header__container .header__toprow .header__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+}
+
+#header .header__container .header__toprow .header__nav .header__nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -124,50 +147,49 @@ header#header .header__container .header__toprow .header__nav .header__nav__list
       flex-wrap: wrap;
 }
 
-header#header .header__container .header__toprow .header__nav .header__nav__list .header__nav__list--item .header__nav__list--link {
+#header .header__container .header__toprow .header__nav .header__nav__list .header__nav__list--item .header__nav__list--link {
   color: #fff;
   font-family: "DM Sans";
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
-header#header .header__container .header__toprow .header__nav .header__nav__list .header__nav__list--item .header__nav__list--link.active {
+#header .header__container .header__toprow .header__nav .header__nav__list .header__nav__list--item .header__nav__list--link.active {
   color: #d41443;
 }
 
-header#header .header__container .header__toprow .header__nav .header__nav__list .header__nav__list--item .header__nav__list--link:hover {
+#header .header__container .header__toprow .header__nav .header__nav__list .header__nav__list--item .header__nav__list--link:hover {
   color: #d41443;
 }
 
 @media screen and (max-width: 768px) {
-  header#header .header__container .header__toprow .header__nav .header__nav__list {
+  #header .header__container .header__toprow .header__nav .header__nav__list {
     display: none;
   }
 }
 
-header#header .header__container .header__toprow .header__btn {
+#header .header__container .header__toprow .header__btn {
   background-color: #fff;
-  border-radius: 22px;
-  min-width: 159px;
-  height: 45px;
-  font-weight: 700;
-  font-size: 16px;
-  text-align: center;
   color: #d41443;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  min-width: 159px;
   z-index: 2;
 }
 
-header#header .header__container .header__toprow .header__btn svg {
+@media screen and (max-width: 480px) {
+  #header .header__container .header__toprow .header__btn {
+    display: none;
+  }
+}
+
+#header .header__container .header__toprow .header__btn svg {
   margin-left: 10px;
 }
 
-header#header .header__container .header__toprow .header__btn:hover {
+#header .header__container .header__toprow .header__btn:hover {
   background-color: #ecebeb;
 }
 
-header#header .header__container .header__main {
+#header .header__container .header__main {
   margin: 80px 0 60px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -178,25 +200,37 @@ header#header .header__container .header__main {
 }
 
 @media screen and (max-width: 768px) {
-  header#header .header__container .header__main {
+  #header .header__container .header__main {
     margin: 15px 0 19px;
   }
 }
 
-header#header .header__container .header__main .header__main__left {
+@media screen and (max-width: 320px) {
+  #header .header__container .header__main {
+    margin: 130px 0 0;
+  }
+}
+
+#header .header__container .header__main .header__main__left {
   max-width: 277px;
   margin-left: 65px;
   z-index: 2;
 }
 
 @media screen and (max-width: 768px) {
-  header#header .header__container .header__main .header__main__left {
+  #header .header__container .header__main .header__main__left {
     margin-left: 0;
     max-width: 165px;
   }
 }
 
-header#header .header__container .header__main .header__main__left .header__main__left--title {
+@media screen and (max-width: 320px) {
+  #header .header__container .header__main .header__main__left {
+    max-width: 213px;
+  }
+}
+
+#header .header__container .header__main .header__main__left .header__main__left--title {
   font-size: 38px;
   text-transform: uppercase;
   line-height: 43px;
@@ -204,27 +238,41 @@ header#header .header__container .header__main .header__main__left .header__main
 }
 
 @media screen and (max-width: 768px) {
-  header#header .header__container .header__main .header__main__left .header__main__left--title {
+  #header .header__container .header__main .header__main__left .header__main__left--title {
     font-size: 22px;
     line-height: 25px;
     margin-bottom: 20px;
   }
 }
 
-header#header .header__container .header__main .header__main__left .header__main__left--title span {
+@media screen and (max-width: 320px) {
+  #header .header__container .header__main .header__main__left .header__main__left--title {
+    font-size: 26px;
+    line-height: 29px;
+  }
+}
+
+#header .header__container .header__main .header__main__left .header__main__left--title span {
   color: #d41443;
   font-size: 58px;
   line-height: 52px;
 }
 
 @media screen and (max-width: 768px) {
-  header#header .header__container .header__main .header__main__left .header__main__left--title span {
+  #header .header__container .header__main .header__main__left .header__main__left--title span {
     font-size: 34px;
     line-height: 30px;
   }
 }
 
-header#header .header__container .header__main .header__main__left .header__main__left__buttons .header__main__left__buttons--btn {
+@media screen and (max-width: 320px) {
+  #header .header__container .header__main .header__main__left .header__main__left--title span {
+    font-size: 48px;
+    line-height: 45px;
+  }
+}
+
+#header .header__container .header__main .header__main__left .header__main__left__buttons .header__main__left__buttons--btn {
   padding: 10px 20px;
   border-radius: 20px;
   -webkit-transition: all 0.35s ease-in;
@@ -232,32 +280,44 @@ header#header .header__container .header__main .header__main__left .header__main
 }
 
 @media screen and (max-width: 768px) {
-  header#header .header__container .header__main .header__main__left .header__main__left__buttons .header__main__left__buttons--btn {
+  #header .header__container .header__main .header__main__left .header__main__left__buttons .header__main__left__buttons--btn {
     font-size: 8px;
     line-height: 10px;
     padding: 7px 15px;
   }
 }
 
-header#header .header__container .header__main .header__main__left .header__main__left__buttons .header__main__left__buttons--btn:first-child {
+#header .header__container .header__main .header__main__left .header__main__left__buttons .header__main__left__buttons--btn:first-child {
   margin-right: 15px;
 }
 
-header#header .header__container .header__main .header__main__left .header__main__left__buttons .header__main__left__buttons--btn.btn--primary:hover {
+@media screen and (max-width: 320px) {
+  #header .header__container .header__main .header__main__left .header__main__left__buttons .header__main__left__buttons--btn:first-child {
+    margin-right: 8px;
+  }
+}
+
+#header .header__container .header__main .header__main__left .header__main__left__buttons .header__main__left__buttons--btn.btn--primary:hover {
   background-color: #c7133e;
 }
 
-header#header .header__container .header__main .header__main__left .header__main__left__buttons .header__main__left__buttons--btn.btn--secondary:hover {
+#header .header__container .header__main .header__main__left .header__main__left__buttons .header__main__left__buttons--btn.btn--secondary:hover {
   background-color: #ecebeb;
 }
 
-header#header .header__container .header__main .header__main__right .header__main__right__numbers {
+@media screen and (max-width: 320px) {
+  #header .header__container .header__main .header__main__right {
+    display: none;
+  }
+}
+
+#header .header__container .header__main .header__main__right .header__main__right__numbers {
   text-align: right;
   position: relative;
   z-index: 2;
 }
 
-header#header .header__container .header__main .header__main__right .header__main__right__numbers--number {
+#header .header__container .header__main .header__main__right .header__main__right__numbers--number {
   display: block;
   color: #d41443;
   font-size: 46px;
@@ -266,30 +326,30 @@ header#header .header__container .header__main .header__main__right .header__mai
 }
 
 @media screen and (max-width: 768px) {
-  header#header .header__container .header__main .header__main__right .header__main__right__numbers--number {
+  #header .header__container .header__main .header__main__right .header__main__right__numbers--number {
     font-size: 28px;
     line-height: 15px;
   }
 }
 
-header#header .header__container .header__main .header__main__right .header__main__right__numbers--text {
+#header .header__container .header__main .header__main__right .header__main__right__numbers--text {
   color: #fff;
   font-size: 14px;
   font-family: "DM Sans";
 }
 
 @media screen and (max-width: 768px) {
-  header#header .header__container .header__main .header__main__right .header__main__right__numbers--text {
+  #header .header__container .header__main .header__main__right .header__main__right__numbers--text {
     font-size: 8px;
     line-height: 10px;
   }
 }
 
-header#header .header__container .header__main .header__main__right .header__main__right__numbers:first-child {
+#header .header__container .header__main .header__main__right .header__main__right__numbers:first-child {
   margin-bottom: 20px;
 }
 
-header#header .header__container .header__main .header__main__right .header__main__right__numbers::before {
+#header .header__container .header__main .header__main__right .header__main__right__numbers::before {
   content: '';
   width: 30px;
   height: 30px;
@@ -302,7 +362,7 @@ header#header .header__container .header__main .header__main__right .header__mai
 }
 
 @media screen and (max-width: 768px) {
-  header#header .header__container .header__main .header__main__right .header__main__right__numbers::before {
+  #header .header__container .header__main .header__main__right .header__main__right__numbers::before {
     height: 16px;
     width: 16px;
     right: -9px;
@@ -310,7 +370,7 @@ header#header .header__container .header__main .header__main__right .header__mai
   }
 }
 
-header#header .header__container .header__bottomrow {
+#header .header__container .header__bottomrow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -322,7 +382,13 @@ header#header .header__container .header__bottomrow {
           align-items: flex-end;
 }
 
-header#header .header__container .header__bottomrow .header__bottomrow__left {
+@media screen and (max-width: 320px) {
+  #header .header__container .header__bottomrow {
+    display: none;
+  }
+}
+
+#header .header__container .header__bottomrow .header__bottomrow__left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -333,23 +399,23 @@ header#header .header__container .header__bottomrow .header__bottomrow__left {
 }
 
 @media screen and (max-width: 768px) {
-  header#header .header__container .header__bottomrow .header__bottomrow__left .header__bottomrow__left__image--img {
+  #header .header__container .header__bottomrow .header__bottomrow__left .header__bottomrow__left__image--img {
     width: 124px;
     height: 126px;
   }
 }
 
-header#header .header__container .header__bottomrow .header__bottomrow__left .header__bottomrow__left__text {
+#header .header__container .header__bottomrow .header__bottomrow__left .header__bottomrow__left__text {
   max-width: 200px;
 }
 
 @media screen and (max-width: 768px) {
-  header#header .header__container .header__bottomrow .header__bottomrow__left .header__bottomrow__left__text {
+  #header .header__container .header__bottomrow .header__bottomrow__left .header__bottomrow__left__text {
     max-width: 114px;
   }
 }
 
-header#header .header__container .header__bottomrow .header__bottomrow__left .header__bottomrow__left__text--para {
+#header .header__container .header__bottomrow .header__bottomrow__left .header__bottomrow__left__text--para {
   font-family: "DM Sans";
   line-height: 19px;
   font-size: 14px;
@@ -357,13 +423,13 @@ header#header .header__container .header__bottomrow .header__bottomrow__left .he
 }
 
 @media screen and (max-width: 768px) {
-  header#header .header__container .header__bottomrow .header__bottomrow__left .header__bottomrow__left__text--para {
+  #header .header__container .header__bottomrow .header__bottomrow__left .header__bottomrow__left__text--para {
     font-size: 8px;
     line-height: 12px;
   }
 }
 
-header#header .header__container .header__bottomrow .header__bottomrow__left .header__bottomrow__left__text--arrow {
+#header .header__container .header__bottomrow .header__bottomrow__left .header__bottomrow__left__text--arrow {
   width: 26px;
   height: 26px;
   border-radius: 50%;
@@ -371,13 +437,13 @@ header#header .header__container .header__bottomrow .header__bottomrow__left .he
 }
 
 @media screen and (max-width: 768px) {
-  header#header .header__container .header__bottomrow .header__bottomrow__left .header__bottomrow__left__text--arrow {
+  #header .header__container .header__bottomrow .header__bottomrow__left .header__bottomrow__left__text--arrow {
     width: 18px;
     height: 18px;
   }
 }
 
-header#header .header__container .header__bottomrow .header__bottomrow__right {
+#header .header__container .header__bottomrow .header__bottomrow__right {
   z-index: 2;
   position: absolute;
   bottom: -3px;
@@ -389,20 +455,26 @@ header#header .header__container .header__bottomrow .header__bottomrow__right {
 }
 
 @media screen and (max-width: 768px) {
-  header#header .header__container .header__bottomrow .header__bottomrow__right {
+  #header .header__container .header__bottomrow .header__bottomrow__right {
     width: 168px;
     height: 133px;
   }
 }
 
-header#header .header__container .header__bottomrow .header__bottomrow__right--img {
+@media screen and (max-width: 480px) {
+  #header .header__container .header__bottomrow .header__bottomrow__right {
+    display: none;
+  }
+}
+
+#header .header__container .header__bottomrow .header__bottomrow__right--img {
   width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-header#header .header__icecream {
+#header .header__icecream {
   width: 538px;
   height: 538px;
   border-radius: 50%;
@@ -414,7 +486,7 @@ header#header .header__icecream {
 }
 
 @media screen and (max-width: 768px) {
-  header#header .header__icecream {
+  #header .header__icecream {
     height: 324px;
     width: 322px;
     left: 37%;
@@ -422,14 +494,23 @@ header#header .header__icecream {
   }
 }
 
-header#header .header__icecream img {
+@media screen and (max-width: 320px) {
+  #header .header__icecream {
+    height: 346px;
+    width: 344px;
+    left: 10%;
+    top: 83px;
+  }
+}
+
+#header .header__icecream img {
   position: relative;
   top: 15%;
   left: 13%;
 }
 
 @media screen and (max-width: 768px) {
-  header#header .header__icecream img {
+  #header .header__icecream img {
     height: 336px;
     width: 144px;
     left: 20%;
@@ -437,57 +518,31 @@ header#header .header__icecream img {
   }
 }
 
-header#header .header__navbar {
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-@media screen and (max-width: 768px) {
-  header#header .header__navbar.show {
-    right: 0;
-    opacity: 1;
+@media screen and (max-width: 320px) {
+  #header .header__icecream img {
+    height: 410px;
+    width: 171px;
+    left: 25%;
+    top: 10px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  header#header .header__navbar .header__navbar__buttons .header__navbar__buttons--closeBtn {
-    cursor: pointer;
+  #header {
+    height: 400px;
   }
 }
 
-@media screen and (max-width: 768px) {
-  header#header .header__navbar .header__navbar__buttons .header__navbar__buttons--btn {
-    width: 100%;
-    text-align: center;
+@media screen and (max-width: 480px) {
+  #header {
+    padding: 20px 25px;
   }
 }
 
-@media screen and (max-width: 768px) {
-  header#header .header__navbar .header__navbar__buttons {
-    padding: 23px 34px 25px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  header#header .header__navbar {
-    width: 254px;
-    height: 1020px;
-    background-color: #e17992;
-    position: absolute;
-    right: -254px;
-    opacity: 0;
-    top: 0;
-    z-index: 4;
+@media screen and (max-width: 320px) {
+  #header {
+    height: 502px;
+    padding: 5px 20px 0;
   }
 }
 
@@ -514,6 +569,98 @@ header#header .header__navbar {
     -webkit-transform: translateX(0);
             transform: translateX(0);
     opacity: 1;
+  }
+}
+
+.navbar {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  width: 254px;
+  height: 1020px;
+  background-color: #e17992;
+  position: absolute;
+  right: -254px;
+  opacity: 0;
+  top: 0;
+  z-index: 4;
+}
+
+@media screen and (max-width: 320px) {
+  .navbar {
+    width: 100%;
+    right: -100%;
+  }
+}
+
+.navbar.show {
+  right: 0;
+  opacity: 1;
+}
+
+.navbar .navbar__buttons {
+  padding: 23px 34px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.navbar .navbar__buttons .navbar__buttons--closeBtn {
+  cursor: pointer;
+  margin-bottom: 23px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar .navbar__buttons .navbar__buttons--closeBtn svg {
+  fill: #fff;
+}
+
+.navbar .navbar__buttons .navbar__buttons--closeBtn:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.navbar .navbar__buttons .navbar__buttons--btn {
+  background-color: #fff;
+  color: #d41443;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.navbar .navbar__buttons .navbar__buttons--btn:hover {
+  background-color: #ecebeb;
+}
+
+.navbar .navbar__menu--item {
+  padding: 13px 24px;
+  border-top: 1px solid #e18298;
+}
+
+.navbar .navbar__menu--item:last-child {
+  border-bottom: 1px solid #e18298;
+}
+
+.navbar .navbar__menu--item .navbar__menu--link {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.navbar .navbar__menu--item .navbar__menu--link.active {
+  color: #d41443;
+}
+
+@media screen and (max-width: 320px) {
+  .navbar {
+    width: 100%;
+    right: -100%;
   }
 }
 /*# sourceMappingURL=main.css.map */

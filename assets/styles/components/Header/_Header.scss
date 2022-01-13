@@ -1,18 +1,14 @@
-@import './../../variables.scss';
-@import './media.scss';
+@import './../../_Variables.scss';
+@import './_Responsive.scss';
+@import './../../_mixins.scss';
 
-header#header {
+#header {
   height: 100vh;
   width: 100%;
   padding: 38px 35px;
   position: relative;
   overflow: hidden;
-
   background-color: $header-bgc;
-
-  @media screen and (max-width: $TabletScreen) {
-    height: 400px;
-  }
 
   .header__container {
     max-width: 1120px;
@@ -25,6 +21,7 @@ header#header {
       width: 100%;
 
       .header__logo {
+        z-index: 2;
         .header__logo--link {
         }
 
@@ -36,6 +33,11 @@ header#header {
         width: 541px;
         z-index: 2;
         margin: 0 10px;
+
+        @media screen and (max-width: $TabletScreen) {
+          display: flex;
+          justify-content: end;
+        }
 
         .header__nav__list {
           display: flex;
@@ -65,18 +67,13 @@ header#header {
       }
 
       .header__btn {
-        background-color: #fff;
-        border-radius: 22px;
+        @include buttonColors(#fff, $primary-textColor);
         min-width: 159px;
-        height: 45px;
-
-        font-weight: 700;
-        font-size: 16px;
-        text-align: center;
-        color: $primary-textColor;
-
-        transition: all 0.5s ease-in-out;
         z-index: 2;
+
+        @media screen and (max-width: $MobileScreen) {
+          display: none;
+        }
 
         svg {
           margin-left: 10px;
@@ -84,9 +81,6 @@ header#header {
 
         &:hover {
           background-color: #ecebeb;
-
-          svg {
-          }
         }
       }
     }
@@ -100,6 +94,10 @@ header#header {
         margin: 15px 0 19px;
       }
 
+      @media screen and (max-width: $XSScreen) {
+        margin: 130px 0 0;
+      }
+
       .header__main__left {
         max-width: 277px;
         margin-left: 65px;
@@ -108,6 +106,10 @@ header#header {
         @media screen and (max-width: $TabletScreen) {
           margin-left: 0;
           max-width: 165px;
+        }
+
+        @media screen and (max-width: $XSScreen) {
+          max-width: 213px;
         }
 
         .header__main__left--title {
@@ -121,6 +123,12 @@ header#header {
             line-height: 25px;
             margin-bottom: 20px;
           }
+
+          @media screen and (max-width: $XSScreen) {
+            font-size: 26px;
+            line-height: 29px;
+          }
+
           span {
             color: $primary-textColor;
             font-size: 58px;
@@ -129,6 +137,11 @@ header#header {
             @media screen and (max-width: $TabletScreen) {
               font-size: 34px;
               line-height: 30px;
+            }
+
+            @media screen and (max-width: $XSScreen) {
+              font-size: 48px;
+              line-height: 45px;
             }
           }
         }
@@ -147,6 +160,10 @@ header#header {
 
             &:first-child {
               margin-right: 15px;
+
+              @media screen and (max-width: $XSScreen) {
+                margin-right: 8px;
+              }
             }
 
             &.btn--primary {
@@ -165,6 +182,10 @@ header#header {
       }
 
       .header__main__right {
+        @media screen and (max-width: $XSScreen) {
+          display: none;
+        }
+
         .header__main__right__numbers {
           text-align: right;
           position: relative;
@@ -224,6 +245,10 @@ header#header {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
+
+      @media screen and (max-width: $XSScreen) {
+        display: none;
+      }
 
       .header__bottomrow__left {
         display: flex;
@@ -287,6 +312,10 @@ header#header {
           height: 133px;
         }
 
+        @media screen and (max-width: $MobileScreen) {
+          display: none;
+        }
+
         &--img {
           width: 100%;
           height: auto;
@@ -313,6 +342,13 @@ header#header {
       top: 31px;
     }
 
+    @media screen and (max-width: $XSScreen) {
+      height: 346px;
+      width: 344px;
+      left: 10%;
+      top: 83px;
+    }
+
     img {
       position: relative;
       top: 15%;
@@ -324,47 +360,27 @@ header#header {
         left: 20%;
         bottom: 0;
       }
+
+      @media screen and (max-width: $XSScreen) {
+        height: 410px;
+        width: 171px;
+        left: 25%;
+        top: 10px;
+      }
     }
   }
 
-  .header__navbar {
-    transition: all 0.5s ease-in-out;
-    &.show {
-      @media screen and (max-width: $TabletScreen) {
-        right: 0;
-        opacity: 1;
-      }
-    }
-    .header__navbar__buttons {
-      .header__navbar__buttons--closeBtn {
-        @media screen and (max-width: $TabletScreen) {
-          cursor: pointer;
-        }
-      }
+  @media screen and (max-width: $TabletScreen) {
+    height: 400px;
+  }
 
-      .header__navbar__buttons--btn {
-        @media screen and (max-width: $TabletScreen) {
-          width: 100%;
-          text-align: center;
-        }
-      }
-      @media screen and (max-width: $TabletScreen) {
-        padding: 23px 34px 25px;
-        display: flex;
-        align-items: flex-end;
-        flex-direction: column;
-      }
-    }
-    @media screen and (max-width: $TabletScreen) {
-      width: 254px;
-      height: 1020px;
-      background-color: $NavbarColor;
-      position: absolute;
-      right: -254px;
-      opacity: 0;
-      top: 0;
-      z-index: 4;
-    }
+  @media screen and (max-width: $MobileScreen) {
+    padding: 20px 25px;
+  }
+
+  @media screen and (max-width: $XSScreen) {
+    height: 502px;
+    padding: 5px 20px 0;
   }
 }
 

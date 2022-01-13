@@ -1,0 +1,4 @@
+@mixin buttonColors($bgColor, $fontColor) {
+  background-color: $bgColor;
+  color: $fontColor;
+}

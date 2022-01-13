@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Icecream Project Work</title>
     <link rel="stylesheet" href="./assets/styles/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,7 +45,7 @@
                     </div>
                 </nav>
 
-                <button class="header__btn">
+                <button class="header__btn btn">
                     But it now
                     <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 1L5 5L1 9" stroke="#D41443" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -111,25 +111,42 @@
         <div class="header__icecream">
             <img src="./assets/img/header__icecream.png" alt="">
         </div>
-
-        <div class="header__navbar">
-            <div class="header__navbar__buttons">
-                <span class="header__navbar__buttons--closeBtn">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.25928 1L14.7408 15" stroke="white"/>
-                        <path d="M1 14.7407L15 1.25924" stroke="white"/>
-                    </svg>
-                </span>
-                <button class="header__navbar__buttons--btn">
-                    Buy now
-                    <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.03772 1L5.71697 5L1.03772 9" stroke="#D41443" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-            </div>
-        </div>
     </header>
 
+    <div class="navbar">
+        <div class="navbar__buttons">
+            <span class="navbar__buttons--closeBtn">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.25928 1L14.7408 15" stroke="white"/>
+                    <path d="M1 14.7407L15 1.25924" stroke="white"/>
+                </svg>
+            </span>
+            <button class="navbar__buttons--btn btn">
+                Buy now
+                <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.03772 1L5.71697 5L1.03772 9" stroke="#D41443" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+
+        <ul class="navbar__menu">
+            <li class="navbar__menu--item">
+                <a href="#" class="navbar__menu--link active">Home</a>
+            </li>
+            <li class="navbar__menu--item">
+                <a href="#" class="navbar__menu--link">About us</a>
+            </li>
+            <li class="navbar__menu--item">
+                <a href="#" class="navbar__menu--link">How it’s made?</a>
+            </li>
+            <li class="navbar__menu--item">
+                <a href="#" class="navbar__menu--link">Our products</a>
+            </li>
+            <li class="navbar__menu--item">
+                <a href="#" class="navbar__menu--link">Contact</a>
+            </li>
+        </ul>
+    </div>
     <script src="./script.js"></script>
 </body>
 </html>

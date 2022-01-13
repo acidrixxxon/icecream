@@ -1,0 +1,81 @@
+@import '../../mixins';
+@import '../../Variables';
+
+.navbar {
+  transition: all 0.5s ease-in-out;
+  width: 254px;
+  height: 1020px;
+  background-color: $NavbarColor;
+  position: absolute;
+  right: -254px;
+  opacity: 0;
+  top: 0;
+  z-index: 4;
+
+  @media screen and (max-width: $XSScreen) {
+    width: 100%;
+    right: -100%;
+  }
+
+  &.show {
+    right: 0;
+    opacity: 1;
+  }
+
+  .navbar__buttons {
+    padding: 23px 34px 25px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+
+    .navbar__buttons--closeBtn {
+      cursor: pointer;
+      margin-bottom: 23px;
+      transition: all 0.5s ease-in-out;
+
+      svg {
+        fill: #fff;
+      }
+
+      &:hover {
+        transform: rotate(90deg);
+      }
+    }
+
+    .navbar__buttons--btn {
+      @include buttonColors(#fff, $primary-textColor);
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+
+      &:hover {
+        background-color: #ecebeb;
+      }
+    }
+  }
+
+  .navbar__menu {
+    &--item {
+      padding: 13px 24px;
+      border-top: 1px solid #e18298;
+
+      &:last-child {
+        border-bottom: 1px solid #e18298;
+      }
+
+      .navbar__menu--link {
+        font-size: 14px;
+        line-height: 18px;
+
+        &.active {
+          color: $primary-textColor;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    width: 100%;
+    right: -100%;
+  }
+}

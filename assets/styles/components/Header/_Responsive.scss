@@ -1,13 +1,7 @@
-@import './../../variables.scss';
+@import './../../_Variables.scss';
 
 @media screen and (max-width: $TabletScreen) {
-  header#header {
-    height: 400px;
-  }
   .header__nav {
-    display: flex;
-    justify-content: end;
-
     .header__nav__hamburger {
       width: 20px;
       height: 15px;
@@ -23,5 +17,11 @@
         display: block;
       }
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header__nav__hamburger {
+    margin-right: 0 !important;
   }
 }

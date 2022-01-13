@@ -1,4 +1,5 @@
-@import '../styles/variables.scss';
+@import '../styles/_Variables.scss';
+@import '../styles/_mixins.scss';
 
 * {
   margin: 0;
@@ -6,13 +7,25 @@
   box-sizing: border-box;
 }
 
+a,
 a:link,
 a:visited {
+  color: #fff;
   text-decoration: none;
 }
 
 li {
   list-style: none;
+}
+
+body {
+  font-family: $primary-ff;
+  color: white;
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
 }
 
 button {
@@ -21,13 +34,19 @@ button {
   cursor: pointer;
 }
 
-body {
-  font-family: $primary-ff;
-  color: white;
-}
+.btn {
+  border-radius: 22px;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 22px;
+  transition: all 0.5s ease-in-out;
+  padding: 12px 10px;
+  line-height: 20px;
 
-.container {
-  margin: 0 auto;
+  svg {
+    margin-left: 10px;
+  }
 }
 
 .btn--primary {
@@ -41,3 +60,4 @@ body {
 }
 
 @import './components/Header/_Header.scss';
+@import './components/Navbar/_Navbar.scss';
