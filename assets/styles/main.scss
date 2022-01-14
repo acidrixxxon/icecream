@@ -69,6 +69,16 @@ span.label {
   letter-spacing: 0.04em;
   margin-bottom: 15px;
   text-transform: uppercase;
+
+  @media screen and (max-width: $TabletScreen) {
+    font-size: 26px;
+    line-height: 29px;
+  }
+
+  @media screen and (max-width: $MobileScreen) {
+    font-size: 18px;
+    line-height: 20px;
+  }
 }
 
 h1.title {
@@ -77,6 +87,16 @@ h1.title {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: $primary-textColor;
+
+  @media screen and (max-width: $TabletScreen) {
+    font-size: 48px;
+    line-height: 54px;
+  }
+
+  @media screen and (max-width: $MobileScreen) {
+    font-size: 34px;
+    line-height: 38px;
+  }
 }
 
 @import './components/Header/_Header.scss';
