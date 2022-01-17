@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0">
     <title>Icecream Project Work</title>
     <link rel="stylesheet" href="./assets/styles/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -261,7 +261,12 @@
     <section id="reviews"> 
         <div class="reviews__container container">
             <div class="reviews__review">
-                <img src="./assets/img/review1-avatar.jpg" alt="review author" class="reviews__review--avatart">
+                
+                <img src="./assets/img/review1-avatar.jpg" alt="review author" class="reviews__review--avatar avatar1" data-index="0">
+                <img src="./assets/img/review2-avatar.png" alt="review author" class="reviews__review--avatar avatar2" data-index="1">
+                <img src="./assets/img/review3-avatar.png" alt="review author" class="reviews__review--avatar avatar3" data-index="2">
+                
+                
 
                 <div class="reviews__review__content">
                     <p class="reviews__review__content--para">
@@ -275,9 +280,9 @@
                 </div>
             </div>
             <div class="reviews__pagination">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span class="reviews__pagination--item" data-index="0"></span>
+                <span class="reviews__pagination--item" onclick={paginationDotHandler} data-index="1"> </span>
+                <span class="reviews__pagination--item" data-index="2"></span>
             </div>
         </div>
     </section>

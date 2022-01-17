@@ -144,6 +144,7 @@
 
       .contacts__buttons-list--btn {
         padding: 14px 35px;
+        transition: all 0.5s ease-in-out;
 
         &:first-child {
           background-color: #d41342;
@@ -159,6 +160,10 @@
         &:last-child {
           background-color: #fff;
           color: #d41443;
+
+          &:hover {
+            background: #ecebeb;
+          }
         }
       }
     }

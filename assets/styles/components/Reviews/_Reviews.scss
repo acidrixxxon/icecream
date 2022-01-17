@@ -22,8 +22,18 @@
       align-items: center;
       text-align: center;
 
-      img {
+      .reviews__review--avatar {
         margin-bottom: 15px;
+        display: none;
+
+        &.show {
+          display: inline;
+          animation: smooth-show 2s;
+        }
+
+        &.hide {
+          animation: smooth-hide 2s;
+        }
       }
 
       .reviews__review__content {
@@ -76,13 +86,49 @@
     .reviews__pagination {
       text-align: center;
 
-      span {
+      .reviews__pagination--item {
+        cursor: pointer;
         display: inline-block;
         width: 12px;
         height: 12px;
         border-radius: 50%;
         background-color: #d9d9d9;
+
+        &.active {
+          &:before {
+            content: '';
+            background: url('http://127.0.0.1:5500/assets/img/pagination-active.png') center center
+              no-repeat;
+            display: block;
+            width: 12px;
+            height: 12px;
+          }
+        }
       }
     }
+  }
+}
+
+@keyframes smooth-show {
+  0% {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes smooth-hide {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(150px);
+    opacity: 0;
   }
 }

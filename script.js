@@ -21,3 +21,49 @@ document.querySelector('.header__nav__hamburger').addEventListener('click', show
 //     }
 //   }
 // });
+
+// -----------------------reviews slider
+const paginationDots = document.querySelectorAll('.reviews__pagination--item');
+const reviewSlides = document.querySelectorAll('.reviews__review--avatar');
+
+let activeIndex = 0;
+let prevIndex = null;
+
+paginationDots[activeIndex].classList.add('active');
+reviewSlides[activeIndex].classList.add('show');
+
+const paginationDotHandler = (e) => {
+  prevIndex = activeIndex;
+  activeIndex = e.target.dataset.index;
+
+  if (!e.target.classList.contains('active')) {
+    paginationDots.forEach((dot) => {
+      if (dot.classList.contains('active')) {
+        dot.classList.remove('active');
+      }
+    });
+
+    e.target.classList.add('active');
+  }
+};
+
+const changeSlide = () => {
+  console.log('Slide is changed!');
+  console.log(reviewSlides[prevIndex]);
+  reviewSlides.forEach((slide) => {
+    if (slide.classList.contains('show')) {
+      slide.classList.remove('show');
+    }
+  });
+
+  reviewSlides[activeIndex].classList.add('show');
+};
+
+const changeSlideHandler = (e) => {
+  changeSlide();
+  paginationDotHandler(e);
+};
+
+paginationDots.forEach((dot) => {
+  dot.onclick = changeSlideHandler;
+});
