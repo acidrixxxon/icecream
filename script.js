@@ -69,6 +69,7 @@ paginationDots.forEach((dot) => {
 
 const modal = document.getElementById('modal');
 const closeBtn = document.querySelector('.modal__close');
+const cancelBtn = document.querySelector('.cancel-btn');
 
 const openModal = () => {
   modal.classList.add('show');
@@ -87,6 +88,9 @@ document.querySelector('.header__btn').addEventListener('click', () => {
     }
   };
 
+  cancelBtn.onclick = (e) => {
+    closeModal();
+  };
   closeBtn.onclick = (e) => {
     closeModal();
   };
