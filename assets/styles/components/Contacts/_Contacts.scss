@@ -1,0 +1,166 @@
+@import './../../_Variables.scss';
+@import './../../_mixins.scss';
+
+#contacts {
+  color: #333;
+  background-color: #fff5f6;
+  padding: 0 115px 150px;
+
+  @media screen and (max-width: $TabletScreen) {
+    padding: 0 35px;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 0 50px;
+  }
+
+  .contacts__container {
+    transform: translateY(-100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .contacts__address-list {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 85px;
+
+      @media screen and (max-width: $TabletScreen) {
+        flex-wrap: wrap;
+      }
+
+      @media screen and (max-width: $MobileScreen) {
+        margin-bottom: 50px;
+      }
+
+      .contacts__address-list__item {
+        flex-basis: 30%;
+        flex-shrink: 1;
+        max-width: 330px;
+        margin-right: 30px;
+        background-color: #fff;
+        padding: 50px 40px;
+        box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+        border-radius: 24px;
+        font-family: $secondary-ff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 16px;
+        line-height: 186%;
+
+        @media screen and (max-width: 600px) {
+          flex-basis: 100%;
+          max-width: none !important;
+          margin-right: 0;
+        }
+
+        @media screen and (max-width: $TabletScreen) {
+          max-width: 220px;
+          padding: 50px 30px;
+          margin-bottom: 20px;
+
+          &:last-child {
+            margin-top: 20;
+          }
+        }
+
+        @media screen and (max-width: $MobileScreen) {
+          font-size: 12px;
+          padding: 43px 20px;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .contacts__address-list__item--type {
+          text-transform: uppercase;
+          padding: 6px 12px;
+          color: #fff;
+          background-color: #f0d1a5;
+          border-radius: 6px;
+          margin-bottom: 30px;
+
+          @media screen and (max-width: $MobileScreen) {
+            margin-bottom: 25px;
+          }
+
+          &:nth-child(2) {
+            background-color: #c2e297;
+          }
+        }
+
+        .contacts__address-list__item--city {
+          margin-bottom: 10px;
+        }
+
+        .contacts__address-list__item--caption {
+          line-height: 183%;
+          color: #907e82;
+        }
+
+        .contacts__address-list__item__schedule {
+          border-bottom: 1px solid #e1e1e1;
+          width: 100%;
+          padding: 32px 0;
+          border-top: 1px solid #e1e1e1;
+          display: flex;
+          flex-direction: column;
+          margin: 30px 0;
+
+          @media screen and (max-width: $MobileScreen) {
+            padding: 25px 0;
+            margin: 25px 0;
+          }
+
+          span {
+            &:nth-child(2) {
+              margin-bottom: 15px;
+            }
+          }
+
+          .contacts__address-list__item__schedule-time {
+            color: #ffa5ba;
+          }
+        }
+
+        .contacts__address-list__item--phone {
+          color: #907e82;
+        }
+
+        .contacts__address-list__item--email {
+          color: #907e82;
+        }
+      }
+    }
+
+    .contacts__buttons-list {
+      @media screen and (max-width: $MobileScreen) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contacts__buttons-list--btn {
+        padding: 14px 35px;
+
+        &:first-child {
+          background-color: #d41342;
+          color: #fff;
+          margin-right: 15px;
+
+          @media screen and (max-width: $MobileScreen) {
+            margin-bottom: 10px;
+            margin-right: 0;
+          }
+        }
+
+        &:last-child {
+          background-color: #fff;
+          color: #d41443;
+        }
+      }
+    }
+  }
+}

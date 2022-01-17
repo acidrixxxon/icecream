@@ -1,0 +1,88 @@
+@import './../../_Variables.scss';
+@import './../../_mixins.scss';
+
+#reviews {
+  padding: 120px 117px 230px;
+  color: #333;
+
+  @media screen and (max-width: $TabletScreen) {
+    padding: 120px 74px 200px;
+  }
+
+  @media screen and (max-width: $MobileScreen) {
+    padding: 80px 20px 170px;
+  }
+
+  .reviews__container {
+    .reviews__review {
+      max-width: 926px;
+      display: flex;
+      margin: 0 auto;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      img {
+        margin-bottom: 15px;
+      }
+
+      .reviews__review__content {
+        background-color: #fafafa;
+        padding: 45px 60px 30px;
+        width: 100%;
+        margin-bottom: 35px;
+        border-radius: 20px;
+
+        @media screen and (max-width: $TabletScreen) {
+          padding: 45px 35px 30px;
+        }
+
+        &--para {
+          text-align: center;
+          font-family: $secondary-ff;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 186%;
+          letter-spacing: 0.04em;
+          border-bottom: 1px solid #e1e1e1;
+          padding: 0 40px;
+          position: relative;
+
+          @media screen and (max-width: $TabletScreen) {
+            padding: 0 20px;
+          }
+
+          &:first-child::before {
+            content: '';
+            position: absolute;
+            width: 54px;
+            height: 40px;
+            left: -10px;
+            top: 0;
+            background: url('http://127.0.0.1:5500/assets/img/dounleq.png');
+          }
+        }
+      }
+
+      .reviews__review--author {
+        margin-bottom: 35px;
+        font-family: $secondary-ff;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 186%;
+      }
+    }
+
+    .reviews__pagination {
+      text-align: center;
+
+      span {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #d9d9d9;
+      }
+    }
+  }
+}

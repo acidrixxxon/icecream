@@ -1,0 +1,74 @@
+@import './../../_Variables.scss';
+@import './../../_mixins.scss';
+
+#footer {
+  background-color: #fff5f6;
+  padding: 0 115px 100px;
+
+  @media screen and (max-width: $TabletScreen) {
+    padding: 0 35px 100px;
+  }
+
+  @media screen and (max-width: $TabletScreen) {
+    padding: 0 20px 40px;
+  }
+
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+    }
+
+    .footer__left {
+      @media screen and (max-width: 600px) {
+        margin-bottom: 50px;
+      }
+    }
+
+    .footer__right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      .footer__right__social-list {
+        display: flex;
+        margin-bottom: 15px;
+        transition: all 0.5s ease-in-out;
+
+        &--item {
+          margin-left: 25px;
+
+          &:first-child {
+            margin-left: 0;
+          }
+
+          svg {
+            circle {
+              transition: all 0.5s ease-in-out;
+            }
+          }
+
+          &:hover {
+            svg {
+              circle {
+                fill: #d41443;
+              }
+            }
+          }
+        }
+      }
+
+      .footer__right__contacts {
+        color: #000000;
+        font-family: $secondary-ff;
+
+        @media screen and (max-width: $MobileScreen) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

@@ -73,11 +73,13 @@ span.label {
   @media screen and (max-width: $TabletScreen) {
     font-size: 26px;
     line-height: 29px;
+    margin-bottom: 13px;
   }
 
   @media screen and (max-width: $MobileScreen) {
     font-size: 18px;
     line-height: 20px;
+    margin-bottom: 0;
   }
 }
 
@@ -99,6 +101,20 @@ h1.title {
   }
 }
 
+.footer__copyright {
+  text-align: center;
+  border-top: 1px solid #e1e1e1;
+  color: #907e82;
+  padding: 10px 0;
+  font-family: $secondary-ff;
+  background-color: #fff5f6;
+}
+
 @import './components/Header/_Header.scss';
 @import './components/Products/_Products.scss';
 @import './components/Navbar/_Navbar.scss';
+@import './components/About/_About.scss';
+@import './components/Gallery/_Gallery.scss';
+@import './components/Reviews/_Reviews.scss';
+@import './components/Contacts/_Contacts.scss';
+@import './components/Footer/_Footer.scss';

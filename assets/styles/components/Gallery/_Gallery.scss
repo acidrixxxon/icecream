@@ -1,0 +1,11 @@
+@import './../../_Variables.scss';
+@import './../../_mixins.scss';
+
+#gallery {
+  //   background: linear-gradient(90deg, red, blue);
+  .gallery__container {
+    img {
+      width: 100%;
+    }
+  }
+}
