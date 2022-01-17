@@ -73,6 +73,11 @@
         &:last-child {
           margin-right: 0;
         }
+        &:nth-child(2) {
+          .contacts__address-list__item--type {
+            background-color: #c2e297;
+          }
+        }
 
         .contacts__address-list__item--type {
           text-transform: uppercase;
@@ -84,10 +89,6 @@
 
           @media screen and (max-width: $MobileScreen) {
             margin-bottom: 25px;
-          }
-
-          &:nth-child(2) {
-            background-color: #c2e297;
           }
         }
 

@@ -11,16 +11,15 @@ const showNavbar = () => {
 document.querySelector('.navbar__buttons--closeBtn').addEventListener('click', closeBtnHandler);
 document.querySelector('.header__nav__hamburger').addEventListener('click', showNavbar);
 
-// document.querySelector('#header').onClick((e) => {
-//   console.log(e);
-//   if (navbar.classList.contains('show')) {
-//     console.log(true);
-//     console.log(e.target);
-//     if (e.target !== navbar) {
-//       closeBtnHandler();
-//     }
-//   }
-// });
+const navLinks = document.querySelectorAll('.navbar__menu--link');
+
+const hideNavbar = () => {
+  document.querySelector('.navbar').classList.remove('show');
+};
+navLinks.forEach((link) => {
+  console.log(link);
+  link.onclick = hideNavbar;
+});
 
 // -----------------------reviews slider
 const paginationDots = document.querySelectorAll('.reviews__pagination--item');
@@ -66,4 +65,29 @@ const changeSlideHandler = (e) => {
 
 paginationDots.forEach((dot) => {
   dot.onclick = changeSlideHandler;
+});
+
+const modal = document.getElementById('modal');
+const closeBtn = document.querySelector('.modal__close');
+
+const openModal = () => {
+  modal.classList.add('show');
+};
+
+const closeModal = () => {
+  modal.classList.remove('show');
+};
+
+document.querySelector('.header__btn').addEventListener('click', () => {
+  openModal();
+  modal.onclick = (e) => {
+    console.log(e);
+    if (e.target.classList.contains('modal')) {
+      closeModal();
+    }
+  };
+
+  closeBtn.onclick = (e) => {
+    closeModal();
+  };
 });
